@@ -1,13 +1,8 @@
 
 import './App.css';
 import React, { useRef, useState,useEffect} from 'react';
-import { MapContainer, TileLayer, Marker , Popup} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
-import {FaCarSide} from 'react-icons/fa'
-import { renderToString } from 'react-dom/server';
-
-import {GiPlainCircle} from 'react-icons/gi'
+import './fonts/IRANYekanMedium.ttf'
 //data//
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";

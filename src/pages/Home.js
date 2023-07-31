@@ -1,8 +1,11 @@
 import React from 'react'
+import Hero from '../components/Hero.js/Hero'
 
 function Home() {
   return (
-    <div>this is landing page for car tracker</div>
+    <>
+    <Hero />
+    </>
   )
 }
 

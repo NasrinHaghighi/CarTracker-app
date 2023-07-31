@@ -16,7 +16,7 @@ const origin=[41.2420118,-8.7127922 ]
 const posSec=[ 41.2380000,-8.6227922 ]
 //current pos
 const currentLat= 41.2320118 
-const currentlog=-8.5127922
+const currentlog=-8.5127922 
 
 
 

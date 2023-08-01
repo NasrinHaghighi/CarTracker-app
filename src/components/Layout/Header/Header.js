@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container,Top, Bottom,LogoDiv, Nav , LiItem,TopNav ,LoginBtn, TopLi} from './style'
 import Logo from '../../../imges/logo.svg'
-
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -9,7 +9,7 @@ function Header() {
 
   <Top>
 <TopNav>
-    <LoginBtn>ثبت نام / ورود</LoginBtn>
+<Link to='/login'><LoginBtn >ثبت نام / ورود</LoginBtn></Link>
     <TopLi>داشبورد</TopLi>
 </TopNav>
   </Top>

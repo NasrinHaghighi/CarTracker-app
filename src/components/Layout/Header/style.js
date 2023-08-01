@@ -50,6 +50,7 @@ padding: 10px 20px;
 text-align: center;
 border-radius: 10px;
 transition: all .3s ease-in-out;
+color: #fff !important;
 &:hover {
     background-color: ${props=>props.theme.redHover};
   }

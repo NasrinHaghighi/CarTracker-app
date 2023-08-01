@@ -24,6 +24,19 @@ left:150px;
 padding: 10px 14px;
 border-radius: 10px;
 }
+/*login form*/
+::placeholder {
+  /* For modern browsers */
+  text-align: right;
+}
+.custom-link{
+  font-size: 20px  !important;
+}
+.bootestrapInput{
+
+height: 50px;
+
+}
 
 
 

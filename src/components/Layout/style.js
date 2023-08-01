@@ -16,5 +16,5 @@ background-color:${props=>props.theme.lightBg} ; ;
 `
 
 export const Main =styled.div`
- 
+
 `

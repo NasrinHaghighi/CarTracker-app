@@ -9,6 +9,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Layout from './components/Layout/Layout';
+import EmptyLayout from './components/Layout/EmptyLayout';
+import Login from './pages/Login';
+import LoginForm from './components/Login/LoginForm';
 // first position
 
 
@@ -73,16 +76,19 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
-    <Layout>
-     <Routes>
-        <Route path="/" element={<Home />}></Route>
-       
-        <Route path="/dashboard" element={<Dashboard />}></Route>
-      </Routes>
+     
+     <BrowserRouter>
+
+     <Layout>
+     <Routes path='/' element={<Layout />}>
+        <Route index element={<Home />}></Route>
+        <Route path="dashboard" element={<Dashboard />}></Route>
+        <Route path="login" element={<LoginForm />}></Route>
+     </Routes>
+       </Layout>
+   
     
-      </Layout>
-    </BrowserRouter>
+    </BrowserRouter> 
     </>
 //    <div className="App">
 

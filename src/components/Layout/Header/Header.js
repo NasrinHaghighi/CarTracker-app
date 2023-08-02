@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container,Top, Bottom,LogoDiv, Nav , LiItem,TopNav ,LoginBtn, TopLi,DashboardHeader, Info, TopDashboard, ExitBtn, Name} from './style'
 import Logo from '../../../imges/logo.svg'
 import { Link } from "react-router-dom";
@@ -6,6 +6,29 @@ import { useLocation } from 'react-router-dom';
 
 
 function Header() {
+  /**set change background color by scroll */
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const threshold = 200;
+
+      if (scrollY > threshold) {
+        setScrolled(true); 
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+console.log(scrolled)
+
+  /**listen to location to render different header */
   const path=useLocation()
   const pathname=path.pathname
 
@@ -22,7 +45,7 @@ function Header() {
         
       </TopDashboard>
       <Bottom>
-<LogoDiv><img src={Logo} width={100} height={100} alt='logo'/></LogoDiv>
+<LogoDiv><img src={Logo} width={300} height={100} alt='logo'/></LogoDiv>
 <Nav>
     <LiItem>خانه</LiItem>
    <LiItem>محصولات</LiItem>
@@ -33,7 +56,7 @@ function Header() {
     </DashboardHeader> 
     :
    
-    <Container>
+    <Container scrolled={scrolled}>
 
   <Top>
 <TopNav>
@@ -42,7 +65,7 @@ function Header() {
 </TopNav>
   </Top>
   <Bottom>
-<LogoDiv><img src={Logo} width={100} height={100} alt='logo'/></LogoDiv>
+<LogoDiv><img src={Logo} width={300} height={100} alt='logo'/></LogoDiv>
 <Nav>
     <LiItem>خانه</LiItem>
    <LiItem>محصولات</LiItem>

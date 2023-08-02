@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
 export const Container=styled.section`
-background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-height:200px;
+//background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+background: ${props=>props.scrolled ? '#080808' :'linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))'};
+height:170px;
 z-index: 4;
 position:fixed;
  width:100%;
- color:${props=>props.theme.fontColor};
+color: #fff;
+transition: a11 0.8s linear;
 
 `
 export const Top=styled.div`
@@ -70,6 +72,7 @@ height:170px;
 z-index: 4;
 position:absolute;
  width:100%;
+ color: #fff;
 
 `
 export const TopDashboard=styled.div`

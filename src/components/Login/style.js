@@ -1,15 +1,8 @@
 import styled from 'styled-components'
 import {
-    MDBContainer,
-    MDBTabs,
-    MDBTabsItem,
-    MDBTabsLink,
-    MDBTabsContent,
-    MDBTabsPane,
-    MDBBtn,
-    MDBIcon,
+   
     MDBInput,
-    MDBCheckbox
+   
   }
   from 'mdb-react-ui-kit';
 

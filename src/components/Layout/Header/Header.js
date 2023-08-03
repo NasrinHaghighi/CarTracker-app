@@ -60,8 +60,8 @@ console.log(scrolled)
 
   <Top>
 <TopNav>
-<Link to='/login'><LoginBtn >ثبت نام / ورود</LoginBtn></Link>
-    <TopLi>داشبورد</TopLi>
+<LoginBtn > <Link to='/login'>  ثبت نام / ورود   </Link></LoginBtn>
+<TopLi>داشبورد</TopLi>
 </TopNav>
   </Top>
   <Bottom>

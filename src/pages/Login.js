@@ -1,5 +1,5 @@
 import React from 'react'
-import EmptyLayout from '../components/Layout/EmptyLayout'
+
 import LoginForm from '../components/Login/LoginForm'
 
 

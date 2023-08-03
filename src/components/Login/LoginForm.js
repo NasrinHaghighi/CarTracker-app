@@ -10,10 +10,10 @@ import {
   MDBBtn,
   MDBIcon,
   MDBInput,
-  MDBCheckbox
+ 
 }
 from 'mdb-react-ui-kit';
-import { Wrraper , Logo, StyledMDBInput} from './style';
+import { Wrraper , Logo} from './style';
 import LogoImg from '../../imges/logo.svg'
 import { Link } from "react-router-dom";
 
@@ -30,7 +30,7 @@ function LoginForm() {
   return (
 <>
 <Wrraper >
-  <Logo><img src={LogoImg} style={{width:'300px',height:'150px' }}/></Logo>
+  <Logo><img src={LogoImg} style={{width:'300px',height:'150px' }} alt='logo'/></Logo>
     <MDBContainer className="square border border-2 p-5 my-5 d-flex flex-column w-50">
 
     <MDBTabs pills justify className='mb-3 d-flex flex-row justify-content-between'>

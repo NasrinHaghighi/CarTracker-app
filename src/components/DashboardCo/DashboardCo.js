@@ -1,6 +1,7 @@
 import '../../App.css';
 import React, { useRef, useState,useEffect} from 'react';
 import { MapContainer, TileLayer, Marker , Popup,Polyline} from 'react-leaflet';
+import 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import {FaCarSide} from 'react-icons/fa'
@@ -8,6 +9,9 @@ import { renderToString } from 'react-dom/server';
 import {GiPlainCircle} from 'react-icons/gi'
 import {DashboardWrapper} from  './style'
 import Sidebar from './Sidebar/Sidebar';
+
+const OfflineTileLayer = L.TileLayer.Offline;
+const OfflineControl = L.Control.Offline;
 
 
 /*static data*/
@@ -88,6 +92,13 @@ zoomControl={false}
  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 />
+{/* OFFLINE  */}
+ {/* <OfflineTileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        maxZoom={18}
+      /> */}
+       {/* <OfflineControl />  */}
+       {/* OFFLINE  */}
 {markers.map((marker, index) => (
      <Marker key={index} position={marker.position} icon={customIcon}>
        <Popup>{marker.popupText}</Popup>

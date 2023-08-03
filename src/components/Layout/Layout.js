@@ -10,7 +10,7 @@ function Layout({children}) {
   return (
     <MainContainer>
     <InnerContainer>
-      {path != '/login' ?  <Header />: '' }
+      {path !== '/login' ?  <Header />: '' }
          
     <Main>{children}</Main>
     </InnerContainer>
